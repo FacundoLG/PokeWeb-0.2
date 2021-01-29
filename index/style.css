@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+html{
+    background-color: #263238;
+    scroll-behavior: smooth;
+}
+/*header*/
+.miniHeader{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #ef5350;
+    height: 4vh;
+}
+.miniHeader ul li{
+    list-style: none;
+    display: inline;
+}
+.fa{
+    font-size: 20px;
+    width: 50px;
+    text-decoration: none;
+    color: #feca1b
+}
+/*Main*/
+.main-container--title{
+    margin: 20px auto;
+    font-family: 'Potta One', cursive;
+    font-size: 6rem;
+    font-style: bold;
+    color: #feca1b;
+    text-align: center;
+}
+/*DinamicMain*/
+.main-container--data{
+    display: flex;
+    background-color: #ef5350;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 500px;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+.base{
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #263238;
+    width: 20%;
+    max-width: 150px;
+    min-width: 100px;
+    max-height: 200px;
+    min-height: 150px;
+    margin: 6px 1.5%;
+    box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.535);
+}
