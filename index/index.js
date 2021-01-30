@@ -1,24 +1,36 @@
-const data = document.getElementById("dataContainer")
-var pokeLeght = 4
-for(i = 1;i <= pokeLeght;i++){
+
+var pokeLeght = 20
+for(let i = 1;i <= pokeLeght;i++){
     //ApiCode
     const URL = `https://pokeapi.co/api/v2/pokemon/${i}`
-    fetch(URL)
-        .then(response => response.json())
-        .then(datos =>{
-            console.log(datos)
-            var especie = datos.species.name
-            var tipo1 = datos.types[0].type.name
-            var tipo2 = datos.types[1].type.name
-            var imgSrc = datos.sprites.front_default
-            pokename.innerHTML = especie
-            pokeElement1.innerHTML = tipo1
-            pokeElement2.innerHTML = tipo2
-            pokeImage.setAttribute("src",`${imgSrc}`)
-        })
+    
+    async function pokesolicitud(){
+        const response = await fetch(URL)
+        const datos = await response.json()
+
+        return datos
+    }
+    document.addEventListener("DOMContentLoaded", async () =>{
+        let datos = []
+       
+        try{
+             datos = await pokesolicitud();
+        }
+        catch (err){
+            console.log("Error")
+            console.log(err)
+        }
+        
+        console.log(datos)   
+           await popo(datos,i)
+    })
     //DOM creation 
     //Base car creation
 
+}
+
+function popo(datos,i){
+    const data = document.getElementById("dataContainer")
     var card = document.createElement("div")
         card.setAttribute("class","base");
         card.setAttribute("id",`number${i}`)
@@ -63,4 +75,25 @@ for(i = 1;i <= pokeLeght;i++){
         cardname.appendChild(pokeElement2)
     
 
-}
+        var especie = datos.species.name
+        var tipo1 = datos.types[0].type.name
+        var tipo2 = datos.types[1].type.name
+        var imgSrc = datos.sprites.front_default
+        pokename.innerHTML = especie
+        pokeElement1.innerHTML = tipo1
+        // pokeElement2.innerHTML = tipo2
+        pokeImage.setAttribute("src",`${imgSrc}`)
+ }
+    
+
+/* 
+            console.log(datos)
+            var especie = datos.species.name
+            var tipo1 = datos.types[0].type.name
+            var tipo2 = datos.types[1].type.name
+            var imgSrc = datos.sprites.front_default
+            pokename.innerHTML = especie
+            pokeElement1.innerHTML = tipo1
+            pokeElement2.innerHTML = tipo2
+            pokeImage.setAttribute("src",`${imgSrc}`)
+           */
