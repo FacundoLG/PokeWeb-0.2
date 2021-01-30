@@ -75,9 +75,9 @@ function popo(datos,i){
         cardname.appendChild(pokeElement2)
     
 
-        var especie = datos.species.name
+        var especie = datos.name
         var tipo1 = datos.types[0].type.name
-        var tipo2 = datos.types[1].type.name
+        // var tipo2 = datos.types[1].type.name
         var imgSrc = datos.sprites.front_default
         pokename.innerHTML = especie
         pokeElement1.innerHTML = tipo1
