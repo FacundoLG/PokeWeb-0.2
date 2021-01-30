@@ -30,7 +30,9 @@ html{
 .main-container--title{
     margin: 20px auto;
     font-family: 'Potta One', cursive;
+    -webkit-text-stroke: #365fa4 2px ;
     font-size: 6rem;
+    letter-spacing: -5px;
     font-style: bold;
     color: #feca1b;
     text-align: center;
@@ -60,3 +62,43 @@ html{
     margin: 6px 1.5%;
     box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.535);
 }
+/*Card clases*/
+.base-image{
+    background-color: #3e484d;
+    width: 90%;
+    height: 60%;
+    margin: 5px auto 0 auto;
+    border-radius: 5px 5px 0 0;
+}
+.pokeImage{
+    width: 100%;
+}
+.pokeData{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #3e484d;
+    width: 90%;
+    height: 32%;
+    margin: 2px auto 5px auto;
+    border-radius: 0 0 5px 5px;
+}
+.pokeName{
+    display: block;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #feca1b;
+}
+.pokeElement{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image:url(../src//Elements/Icon_Electrico.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+    
