@@ -48,7 +48,8 @@ html{
     border-radius: 5px 5px 0 0;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 1ws0px;
+    padding-bottom: 10px;
 }
 .base{
     display: inline-block;
@@ -56,9 +57,9 @@ html{
     background-color: #263238;
     width: 20%;
     max-width: 150px;
-    min-width: 110px;
+    min-width: 130px;
     max-height: 200px;
-    min-height: 160px;
+    min-height: 180px;
     margin: 6px 1.5%;
     box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.535);
 }
@@ -79,21 +80,33 @@ html{
     justify-content: center;
     background-color: #3e484d;
     width: 90%;
-    height: 32%;
+    height: 35%;
     margin: 2px auto 5px auto;
     border-radius: 0 0 5px 5px;
 }
 .pokeName{
     display: block;
-    width: 100%;
+    width: 90%;
+    margin: 0 10%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-align: center;
     color: #feca1b;
+    margin-top: 5px;
+    text-transform: capitalize;
+    text-align: center;
+
 }
 .pokeElement{
-   font-size: 1.2rem;
-   margin: 5px;
-   color: #feca1b;
+   font-size: 0.8rem;
+   letter-spacing: 1.3px;
+   margin: 4px;
+   height: 17px;
+   color: #ffffff;
+   background-color: #3db30e;
+   padding: 0px 4px;
+   padding-top: 4px;
+   border-radius: 5px;
+   text-transform: uppercase;
 }
     

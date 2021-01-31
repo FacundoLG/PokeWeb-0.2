@@ -1,5 +1,5 @@
 
-var pokeLeght = 20
+var pokeLeght = 50
 for(let i = 1;i <= pokeLeght;i++){
     //ApiCode
     const URL = `https://pokeapi.co/api/v2/pokemon/${i}`
@@ -69,20 +69,34 @@ function popo(datos,i){
         // pokeElement1.setAttribute("src","../src//Elements/Icon_Electrico.png") //Element 1
         cardname.appendChild(pokeElement1)
 
-    var pokeElement2 = document.createElement("p")
-        pokeElement2.setAttribute("class","pokeElement")
-        // pokeElement2.setAttribute("src","../src//Elements/Icon_Electrico.png") //Element 2
-        cardname.appendChild(pokeElement2)
+    
     
 
+        if(datos.types[0] && datos.types[1] ){
+            var tipo1 = datos.types[0].type.name
+            var tipo2 = datos.types[1].type.name
+            
+            var pokeElement2 = document.createElement("p")
+            pokeElement2.setAttribute("class","pokeElement")
+            cardname.appendChild(pokeElement2)
+            
+            
+            pokeElement2.innerHTML = tipo2
+        }else{
+            var tipo1 = datos.types[0].type.name
+        }   
+    
         var especie = datos.name
-        var tipo1 = datos.types[0].type.name
-        // var tipo2 = datos.types[1].type.name
+
+        especie.charAt(0).toUpperCase()
+        //var tipo2 = datos.types[1].type.name
         var imgSrc = datos.sprites.front_default
         pokename.innerHTML = especie
         pokeElement1.innerHTML = tipo1
-        // pokeElement2.innerHTML = tipo2
+        
         pokeImage.setAttribute("src",`${imgSrc}`)
+
+       
  }
     
 
