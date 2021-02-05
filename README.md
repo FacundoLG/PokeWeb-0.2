@@ -1,2 +1,2 @@
-# webSite
-My first dynamic website
+#PokeWeb
+A pokemon card displayer
